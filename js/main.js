@@ -1,10 +1,13 @@
 $(document).ready(function() {
-	$('#content').fullpage({
-		//options here
-		// autoScrolling:true,
-		// scrollHorizontally: true
-	});
-
-	//methods
-	// $.fn.fullpage.setAllowScrolling(false);
+    particlesJS.load('particles-js', 'js/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+    
+	$('#content').onepage_scroll({
+        easing: "ease",
+        keyboard: true,
+        loop: false,
+        pagination: true,
+    });
 });
+

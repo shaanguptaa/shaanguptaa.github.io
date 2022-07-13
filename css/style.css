@@ -18,11 +18,69 @@ body {
     left: 0%;
     height: 100vh;
     width: 100vw;
-    z-index: 10;
+    z-index: 0;
+}
+
+header.nav {
+    padding: 50px 62px;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 100;
+}
+
+.menu-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+}
+
+.bars {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 100%;
+    height: 2px;
+    margin: 5px 0px;
+    background-color: whitesmoke;
+    transform-origin: right;
+    transition: all 0.4s ease-in-out;
+}
+
+.cross-icon > .bar1 {
+    transform: translateY(-2px) rotate(-45deg);
+}
+
+.cross-icon > .bar2 {
+    opacity: 0;
+}
+
+.cross-icon > .bar3 {
+    transform: translateY(1px) rotate(45deg);
+}
+  
+.nav-content {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 90;
+    vertical-align: middle;
+    padding: 17% 10%;
+    background-color: rgba(29, 29, 29, 0.7);
+}
+
+.nav-content.active {
+    opacity: 1;
 }
 
 #content {
-    z-index: 20;
+    z-index: 10;
     background-color: transparent !important;   
 }
 
@@ -33,4 +91,14 @@ body {
 
 #home > #intro > h1 {
     text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 100ms ease-in-out;
+}
+
+a:hover {
+    color: black;
 }

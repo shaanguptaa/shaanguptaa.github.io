@@ -70,14 +70,14 @@
       "detect_on": "canvas",
       "events": {
         "onhover": {
-          "enable": true,
+          "enable": false,
           "mode": "repulse"
         },
         "onclick": {
-          "enable": true,
+          "enable": false,
           "mode": "push"
         },
-        "resize": true
+        "resize": false
       },
       "modes": {
         "grab": {
@@ -104,13 +104,7 @@
         }
       }
     },
-    "retina_detect": true,
-    "config_demo": {
-      "hide_card": false,
-      "background_color": "#b61924",
-      "background_image": "",
-      "background_position": "50% 50%",
-      "background_repeat": "no-repeat",
-      "background_size": "cover"
-    }
+    "retina_detect": false
+    
   }
+

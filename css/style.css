@@ -4,7 +4,7 @@ body {
     color: white;
 
     background-color: black;
-    background-image: url('../images/bg4.jpg');
+    background-image: url('../images/bg3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0% 50%;
@@ -19,6 +19,10 @@ body {
     height: 100vh;
     width: 100vw;
     z-index: 0;
+}
+
+#fp-nav ul li a span {
+    background-color: white !important;
 }
 
 header.nav {
@@ -79,12 +83,12 @@ header.nav {
     opacity: 1;
 }
 
-#content {
+#main {
     z-index: 10;
     background-color: transparent !important;   
 }
 
-#content > section {
+#main > section {
     padding: 50px;
 
 }

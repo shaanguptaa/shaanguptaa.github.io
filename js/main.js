@@ -5,17 +5,103 @@ $('#menu').on('click', function () {
 });
 
 
-// particles and one-scroll
-$(document).ready(function() {
-    particlesJS.load('particles-js', 'js/particles.json', function() {
+$(document).ready(function () {
+    // particles.js initialize
+    particlesJS.load('particles-js', 'js/particles.json', function () {
         console.log('callback - particles.js config loaded');
     });
-    
-	$('#content').onepage_scroll({
-        easing: "ease",
-        keyboard: true,
-        loop: false,
-        pagination: true,
+
+    // onepage-scroll initialize    
+    // $('#content').onepage_scroll({
+    //     easing: "ease",
+    //     keyboard: true,
+    //     loop: false,
+    //     pagination: true,
+    // });
+
+
+    // fullpage.js initialize
+
+    var myFullpage = new fullpage('#main', {
+        licenseKey: 'gplv3-license',
+
+        // Navigation
+        menu: '#menu',
+        lockAnchors: false,
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
+        showActiveTooltip: true,
+        // slidesNavigation: false,
+        // slidesNavPosition: 'bottom',
+
+        // Scrolling
+        css3: true,
+        scrollingSpeed: 800,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 600,
+        scrollBar: false,
+        easing: 'easeInOutCubic',
+        easingcss3: 'ease',
+        // loopBottom: false,
+        // loopTop: false,
+        // loopHorizontal: true,
+        // continuousVertical: false,
+        // continuousHorizontal: false,
+        // scrollHorizontally: false,
+        // interlockedSlides: false,
+        // dragAndMove: false,
+        // offsetSections: false,
+        // resetSliders: false,
+        // fadingEffect: false,
+        // normalScrollElements: '#element1, .element2',
+        scrollOverflow: true,
+        // scrollOverflowMacStyle: false,
+        // scrollOverflowReset: false,
+        touchSensitivity: 15,
+        // bigSectionsDestination: null,
+
+        // Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: false,
+
+        // Design
+
+        // controlArrows: true,
+        // controlArrowsHTML: [
+        //     '<div class="fp-arrow"></div>',
+        //     '<div class="fp-arrow"></div>'
+        // ],
+        verticalCentered: true,
+        // sectionsColor : ['#ccc', '#fff'],
+        paddingTop: '3em',
+        paddingBottom: '10px',
+        fixedElements: '#header, #footer',
+        responsiveWidth: 800,
+        // responsiveHeight: 0,
+
+        // Custom selectors
+        sectionSelector: '.section',
+        // slideSelector: '.slide',
+
+        lazyLoading: true,
+        observer: true,
+        credits: { enabled: false },
+
+        // Events
+        beforeLeave: function (origin, destination, direction, trigger) { },
+        onLeave: function (origin, destination, direction, trigger) { },
+        afterLoad: function (origin, destination, direction, trigger) { },
+        afterRender: function () { },
+        afterResize: function (width, height) { },
+        afterReBuild: function () { },
+        afterResponsive: function (isResponsive) { },
+        afterSlideLoad: function (section, origin, destination, direction, trigger) { },
+        onSlideLeave: function (section, origin, destination, direction, trigger) { },
+        onScrollOverflow: function (section, slide, position, direction) { }
     });
+
 });
 

@@ -1,10 +1,3 @@
-// nav-menu
-$('#menu').on('click', function () {
-    $('.bars', this).toggleClass('cross-icon');
-    $('.nav-content').toggleClass('active');
-});
-
-
 $(document).ready(function () {
     // particles.js initialize
     particlesJS.load('particles-js', 'js/particles.json', function () {
@@ -22,7 +15,7 @@ $(document).ready(function () {
 
     // fullpage.js initialize
 
-    var myFullpage = new fullpage('#main', {
+    let myFullpage = new fullpage('#main', {
         licenseKey: 'gplv3-license',
 
         // Navigation
@@ -92,7 +85,9 @@ $(document).ready(function () {
 
         // Events
         beforeLeave: function (origin, destination, direction, trigger) { },
-        onLeave: function (origin, destination, direction, trigger) { },
+        onLeave: function (origin, destination, direction, trigger) { 
+            if (trigger === "menu") toggleNav();
+        },
         afterLoad: function (origin, destination, direction, trigger) { },
         afterRender: function () { },
         afterResize: function (width, height) { },
@@ -103,5 +98,23 @@ $(document).ready(function () {
         onScrollOverflow: function (section, slide, position, direction) { }
     });
 
+    // console.log(myFullpage);
+
 });
 
+
+// nav-menu toggle
+$('#menu-icon').on('click', toggleNav);
+
+function toggleNav() {
+    $('.bars', '.nav').toggleClass('cross-icon');
+    $('.nav-content').toggleClass('active');
+}
+
+// fn to close nav-menu on ESC key
+document.onkeydown = function (e) {
+    if (e.which === 27) {
+        toggleNav();
+        e.preventDefault(); // prevent the default action (scroll / move caret)
+    }
+};

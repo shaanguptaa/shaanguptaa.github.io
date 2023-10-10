@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Sahil Gupta"/>
+  <meta name="author" content="Sahil Gupta" />
 
   <meta name="description" content="Sahil Gupta | Portfolio">
 
   <meta name="keywords" content="">
 
   <link rel="canonical" href="https://www.nastechnology.co.in/">
+
+  <!-- loader.css -->
+  <link rel="stylesheet" href="css/loader.css" />
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -37,9 +40,20 @@
 </head>
 
 <body>
-  <div id="particles-js"></div>
-  <!-- <div class="blur"></div> -->
+<!-- Loader -->
+<div class="loader-wrapper">
+  <div class="loading">
+    <svg height="48px" width="64px">
+        <polyline id="back" points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"></polyline>
+      <polyline id="front" points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"></polyline>
+    </svg>
+  </div>
+</div>
 
+<!-- particles -->
+  <div id="particles-js"></div>
+
+  <!-- Header Navigation -->
   <header class="nav">
     <div class="container" id="menu-icon">
       <div class="bars">
@@ -74,6 +88,7 @@
 
 
 
+  <!-- SCRIPTS -->
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

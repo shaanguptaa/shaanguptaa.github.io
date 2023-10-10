@@ -98,8 +98,11 @@ $(document).ready(function () {
         onScrollOverflow: function (section, slide, position, direction) { }
     });
 
-    // console.log(myFullpage);
 
+    // remove loader:
+    $('.loader-wrapper').fadeOut(2000, function () {
+        // $(this).hide();
+    });
 });
 
 

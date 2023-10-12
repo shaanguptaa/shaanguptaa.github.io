@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 60,
       "density": {
         "enable": true,
         "value_area": 800
@@ -17,7 +17,7 @@
         "color": "#ffffff"
       },
       "polygon": {
-        "nb_sides": 5
+        "nb_sides": 3
       }
     },
     "opacity": {
@@ -72,7 +72,7 @@
         "enable": false,
         "mode": "push"
       },
-      "resize": false
+      "resize": true
     },
     "modes": {
       "grab": {

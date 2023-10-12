@@ -23,7 +23,7 @@ $(document).ready(function () {
         lockAnchors: false,
         navigation: true,
         navigationPosition: 'right',
-        navigationTooltips: ['firstSlide', 'secondSlide', 'thirdSlide', 'fourthSlide'],
+        navigationTooltips: ['Home', 'secondSlide', 'thirdSlide', 'fourthSlide'],
         showActiveTooltip: true,
         // slidesNavigation: false,
         // slidesNavPosition: 'bottom',
@@ -49,7 +49,7 @@ $(document).ready(function () {
         // resetSliders: false,
         // fadingEffect: false,
         // normalScrollElements: '#element1, .element2',
-        scrollOverflow: true,
+        scrollOverflow: false,
         // scrollOverflowMacStyle: false,
         // scrollOverflowReset: false,
         touchSensitivity: 15,
@@ -71,8 +71,8 @@ $(document).ready(function () {
         // sectionsColor : ['#ccc', '#fff'],
         paddingTop: '3em',
         paddingBottom: '10px',
-        fixedElements: '#header, #footer',
-        responsiveWidth: 800,
+        // fixedElements: '#header, #footer',
+        responsiveWidth: 0,
         // responsiveHeight: 0,
 
         // Custom selectors
@@ -100,8 +100,14 @@ $(document).ready(function () {
 
 
     // remove loader:
-    $('.loader-wrapper').fadeOut(2000, function () {
+    $('.loader-wrapper, .loading').fadeOut(1000, function () {
         // $(this).hide();
+        $(this).css('z-index', '-10');
+        $('.title').css('animation', 'reveal 2s ease forwards');
+    });
+
+    $('avatar').ready(function () {
+        $('.avatar').addClass('loaded');
     });
 });
 

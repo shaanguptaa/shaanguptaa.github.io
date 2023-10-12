@@ -33,6 +33,9 @@
   <!-- One-Scroll CSS -->
   <!-- <link rel="stylesheet" href="css/one-scroll.css"> -->
 
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/8b9033a208.js" crossorigin="anonymous"></script>
+
   <!-- Style.css -->
   <link rel="stylesheet" href="css/style.css" />
 
@@ -65,10 +68,10 @@
 
     <div class="nav-content blur" id="menu">
       <div style="width: 100%;">
-        <div data-menuanchor="first" class="menu-item active"><a href="#first">First section</a></div>
-        <div data-menuanchor="second" class="menu-item"><a href="#second">Second section</a></div>
-        <div data-menuanchor="third" class="menu-item"><a href="#third">Third section</a></div>
-        <div data-menuanchor="fourth" class="menu-item"><a href="#fourth">Fourth section</a></div>
+        <a data-menuanchor="home" class="menu-item" href="#home">Home</a>
+        <a data-menuanchor="second" class="menu-item" href="#second">Second section</a>
+        <a data-menuanchor="third" class="menu-item" href="#third">Third section</a>
+        <a data-menuanchor="fourth" class="menu-item" href="#fourth">Fourth section</a>
       </div>
     </div>
   </header>
@@ -78,7 +81,23 @@
 
 
   <div id="main">
-    <section data-anchor="first" class="section">Some section</section>
+    <section data-anchor="home" class="section section-1">
+      <div class="row">
+        <div class="intro">
+          <div class="text">
+            <p class="display-6" style="padding-left: 15px;">Hey There! I'm</p>
+            <div class="left-border"><h1 class="display-1 title">Sahil Gupta</h1></div>
+            <p class="lead designation">Full-Stack Software Developer</p>
+          </div>
+          <div class="btn-grp">
+            <a href="" class="btn">Contact Me</a>
+            <button class="btn btn-success btn-outline">Resume</button>
+          </div>
+        </div>
+        <!-- <img src="https://www.gravatar.com/avatar/5924fd783584f1d611203cf0ed307243?s=200&d=robohash" loading="lazy" alt="Profile Picture" class="profile-pic" /> -->
+        <img src="images/animation.gif" loading="lazy" alt="Avatar Animation" class="avatar" />
+      </div>
+    </section>
     <section data-anchor="second" class="section">Some section</section>
     <section data-anchor="third" class="section">Some section</section>
     <section data-anchor="fourth" class="section">Some section</section>

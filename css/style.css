@@ -1,36 +1,67 @@
+:root {
+    --color-bg: #010204;
+    --color-text: #F8FCEE;
+    --color-hover: #A24936;
+    --color-btn-bg: #226F54;
+    --color-active: #226F54;
+}
+
+
 body {
     padding: 0%;
     margin: 0%;
-    color: white;
-
-    background-color: black;
-    background-image: url('../images/bg3.jpg');
-    background-clip: border-box;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    background-image: url('../images/bg5.jpg');
+    background-size: cover;
+    position: fixed;
     background-repeat: no-repeat;
-    background-size: cover; 
-    /* background-position: 0% 50%; */
+    background-position: center top;
+    overflow: hidden;
 }
 
 #particles-js {
     position: absolute;
-    background-color: transparent !important;
     top: 0%;
     left: 0%;
     height: 100vh;
     width: 100vw;
     z-index: -1;
+    backdrop-filter: blur(2.5px);
 }
 
 /* Scroll navigation dots */
 #fp-nav ul li a span {
-    background-color: white !important;
+    background-color: var(--color-text) !important;
 }
+
+#fp-nav ul li {
+    transition: all 0.3s ease-in-out;
+}
+
+#fp-nav ul li:has(a.active) {
+    transform: translateX(-5px);
+}
+
+#fp-nav ul li .fp-tooltip {
+    padding-right: 5px;
+    margin-top: -2px;
+}
+
+/* 
+#fp-nav ul li:has(a.active) .fp-tooltip {
+    color: var(--color-active) !important;
+}
+
+#fp-nav ul li a:hover:not(.active) span {
+    background-color: var(--color-hover) !important;
+} */
 
 .blur {
     backdrop-filter: blur(3px);
 }
 
-header.nav > #menu-icon {
+header.nav>#menu-icon {
     padding: 3em 5em;
     position: fixed;
     top: 0%;
@@ -78,9 +109,8 @@ header.nav > #menu-icon {
     width: 100vw;
     position: absolute;
     z-index: -10;
-    /* vertical-align: middle; */
     padding: 0% 13%;
-    background-color: rgba(29, 29, 29, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     transition: all 0.5s ease-in-out;
 }
 
@@ -90,27 +120,29 @@ header.nav > #menu-icon {
 }
 
 .menu-item {
+    display: block;
     text-align: right;
     margin: 2em 0em;
     font-size: 2em;
     font-weight: 600;
     text-transform: uppercase;
-    color: white;
-    transition: all 0.2s ease-in-out;
+    color: var(--color-text);
+    transition: all 0.3s ease-in-out;
 }
 
-#main {
-    /* z-index: 10; */
-    background-color: transparent !important;
+.avatar {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    padding: 0%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
 }
 
-#main>section {
-    padding: 50px;
-
-}
-
-#home>#intro>h1 {
-    text-transform: uppercase;
+.avatar.loaded {
+    opacity: 1;
 }
 
 a {
@@ -120,5 +152,103 @@ a {
 }
 
 a:hover {
-    color: black;
+    color: var(--color-hover);
 }
+
+.menu-item.active {
+    color: var(--color-active);
+    font-size: 2.2em;
+}
+
+.menu-item.active>a:hover {
+    color: var(--color-active);
+}
+
+#main {
+    background-color: transparent !important;
+}
+
+#main>section {
+    padding: 50px !important;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    backdrop-filter: blur(1px);
+    margin-left: 30px;
+}
+
+.intro > p {
+    margin-bottom: 0;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.designation {
+    text-align: right !important;
+}
+
+.left-border {
+    margin-top: 5px;
+    border-left: 5px solid var(--color-hover);
+    padding-left: 10px;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    overflow: hidden !important;
+}
+
+.title {
+    position: relative;
+    left: -105%;
+    width: fit-content;
+    height: fit-content;
+    text-transform: uppercase;
+
+}
+
+@keyframes reveal {
+    0% {
+        left: -105%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+.btn-grp {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-grp > .btn {
+    gap: 40px;
+    color: var(--color-text);
+}
+
+.btn-grp > .btn:hover {
+    border: 1px solid var(--color-hover);
+}
+
+.btn-grp > .btn > i {
+    visibility: hidden;
+    position: relative;
+    color: var(--color-hover);
+    left: -10%;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-grp > .btn:hover > i {
+    visibility: visible;
+    left: 0%;
+}
+
+/* svg {
+    color: var(--color-text);
+    fill: var(--color-text);
+} */

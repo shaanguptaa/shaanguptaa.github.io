@@ -1,0 +1,16 @@
+@media screen and (max-width: 700px) {
+  .menu-item {
+    text-align: center;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 30%;
+    width: 100%;
+    padding: 0;
+  }
+
+  .designation {
+    text-align: center;
+  }
+}

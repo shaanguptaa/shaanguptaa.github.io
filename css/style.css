@@ -26,7 +26,8 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
 }
 
 /* Scroll navigation dots */
@@ -107,7 +108,8 @@ header.nav > #menu-icon {
   z-index: -10;
   padding: 0% 13%;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   transition: all 0.5s ease-in-out;
 }
 
@@ -135,8 +137,6 @@ a {
 
 a:hover {
   color: var(--color-hover);
-  /* transform: translateX(-1em); */
-  /* font-size: 2.2em; */
 }
 
 .menu-item.active {
@@ -160,8 +160,11 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
-  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   padding-left: 50px;
 }
 
@@ -172,8 +175,9 @@ a:hover {
 }
 
 .left-border {
-  /* margin-top: 5px; */
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   align-items: center;
   overflow: hidden !important;
@@ -183,14 +187,25 @@ a:hover {
   position: relative;
   left: -105%;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   text-transform: uppercase;
   color: var(--color-hover);
 }
 
 .designation {
-  /* margin-top: 8px; */
   text-align: right;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    left: -105%;
+  }
+
+  100% {
+    left: 0%;
+  }
 }
 
 @keyframes reveal {
@@ -231,24 +246,13 @@ a:hover {
   left: 0%;
 }
 
-/* svg {
-    color: var(--color-text);
-    fill: var(--color-text);
-} */
-
 .avatar {
   width: 200px;
   height: auto;
-  /* border-radius: 50%; */
   margin: auto;
   position: relative;
   padding: 0%;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.avatar.loaded {
-  opacity: 1;
+  transition: all 1s ease-out;
 }
 
 .scroll-btn {

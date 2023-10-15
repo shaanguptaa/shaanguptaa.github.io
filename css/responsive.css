@@ -1,6 +1,11 @@
 @media screen and (max-width: 700px) {
   .menu-item {
     text-align: center;
+    margin-right: auto;
+  }
+
+  .nav-links {
+    width: 100%;
   }
 
   .intro {
@@ -12,5 +17,19 @@
 
   .designation {
     text-align: center;
+  }
+
+  /* cards */
+  .card-deck {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .card:hover > .card-img-overlay > .card-text {
+    height: 4em;
   }
 }

@@ -48,11 +48,11 @@ $(document).ready(function () {
     // resetSliders: false,
     // fadingEffect: false,
     // normalScrollElements: '#element1, .element2',
-    scrollOverflow: false,
+    scrollOverflow: true,
     // scrollOverflowMacStyle: false,
     // scrollOverflowReset: false,
     touchSensitivity: 15,
-    // bigSectionsDestination: null,
+    bigSectionsDestination: top,
 
     // Accessibility
     keyboardScrolling: true,
@@ -71,6 +71,7 @@ $(document).ready(function () {
     paddingTop: "3em",
     paddingBottom: "10px",
     // fixedElements: '#header, #footer',
+    // fixedElements: '.header, #footer',
     responsiveWidth: 0,
     // responsiveHeight: 0,
 

@@ -25,11 +25,28 @@
   }
 
   .card {
-    width: 80%;
-    margin-bottom: 20px;
+    max-width: 97%;
   }
 
-  .card:hover > .card-img-overlay > .card-text {
-    height: 4em;
+  .card .card-img-overlay {
+    font-size: small;
+    padding-top: 2em;
+  
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    .card-subtitle {
+      font-weight: 200;
+    }
+
+    .card-text {
+      font-weight: normal;
+    }
+  }
+
+  :root {
+    --slide-height: 4em;
   }
 }

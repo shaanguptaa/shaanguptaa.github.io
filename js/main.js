@@ -1,7 +1,7 @@
 $(document).ready(function () {
   // particles.js initialize
   particlesJS.load("particles-js", "js/particles.json", function () {
-    console.log("callback - particles.js config loaded");
+    // console.log("callback - particles.js config loaded");
   });
 
   // onepage-scroll initialize
@@ -109,24 +109,95 @@ $(document).ready(function () {
     ) {},
     onScrollOverflow: function (section, slide, position, direction) {},
   });
+
 });
+
 
 window.addEventListener("load", function () {
   // remove loader
   $(".loader-wrapper, .loading").fadeOut(1000, function () {
-    // $(this).hide();
     $(this).css("display", "none");
     $(".title").css("animation", "reveal 2s ease forwards");
   });
 
-  $(".avatar")
-    .attr("src", $(".avatar").attr("data-source"))
-    .on("load", function () {
-      $(this).removeAttr("data-source");
-      //   $(".avatar").addClass("loaded");
-      //   console.log("avatar loaded", $(this));
-    });
+  // load avatar gif
+  $(".avatar").attr("src", $(".avatar").attr("src").replace(".png", ".gif"));
+  
+  // show card images when loaded and also load gifs
+  $(".card img.card-img:not(.card-img-hover)").each(function () {
+    $(this).on("load", function () {
+        $(this).css("opacity", "1");
+        // const imgHover = document.createElement("img");
+        // imgHover.setAttribute("class", "card-img-hover");
+        // imgHover.setAttribute("src", $(this).attr("src").replace(".png", ".gif"));
+        // $(this).after(imgHover);
+      });
+   });
+
+  //  set initial height of card-text to 0
+  // $(".card .card-img-overlay .card-text").css("height", 0);
+
+
+  // //  set height of hovered card-text dynamically depending on the text-length
+  
+  // $(".card").hover(function () {
+  //   // calculate height of card-text
+  //   const textLen = parseInt($(this).find(".card-text").text().length);
+  //   const lineHeight = parseInt($(this).find(".card-text").css("line-height").replace("px", ""));
+  //   const fontsize = parseInt($(this).find(".card-text").css("font-size").replace("px", ""));
+  //   const width = $(this).find(".card-text").width();
+    
+  //   const totalLen = textLen * fontsize;
+  //   const numLines = Math.round(totalLen / width) - 1;
+  //   const height1 = numLines * lineHeight;
+
+  //   console.log(height1, 'l:', textLen, 'nl:', numLines, 'fs:', fontsize, 'w:', width, this.id);
+
+  //   const element = $(this).find(".card-text");
+  //   // const height = element.height();
+    
+  //   // console.log(element.height(), this.id);
+    
+  //   element.css("height", "auto");
+  //   const height = element.height();
+
+  //   element.css("height", height);
+
+  //   // set initial height to 0
+  //   // element.css("height", 0);
+    
+  //   // handle hover event
+  //   // $(this).hover(
+  //   //   function () {
+  //   //     element.css("height", height);
+  //   //   },
+  //   //   function () {
+  //   //     element.css("height", 0);
+  //   //   }
+  //   // );
+
+  // }, function () {
+  //   $(this).find(".card-text").css("height", 0);
+  // });
+
+
+  // setTimeout(() => {
+    
+  // }, 1000);
+  
+  // $(".card .card-img-overlay .card-text").slideUp(0, 'linear');
+
+  // $(".card").hover(
+  //   function () {
+  //     $(this).find(".card-text").slideDown(800, 'linear');
+  //   },
+  //   function () {
+  //     $(this).find(".card-text").slideUp(500, 'linear');
+  //   }
+  // );
 });
+
+
 
 // nav-menu toggle
 $("#menu-icon").on("click", toggleNav);
@@ -148,3 +219,4 @@ document.onkeydown = function (e) {
     e.preventDefault(); // prevent the default action (scroll / move caret)
   }
 };
+

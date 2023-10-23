@@ -22,7 +22,7 @@ $(document).ready(function () {
     lockAnchors: false,
     navigation: true,
     navigationPosition: "right",
-    navigationTooltips: ["Home", "secondSlide", "thirdSlide", "fourthSlide"],
+    navigationTooltips: ["Home", "Projects", "thirdSlide", "fourthSlide"],
     showActiveTooltip: true,
     // slidesNavigation: false,
     // slidesNavPosition: 'bottom',
@@ -71,7 +71,7 @@ $(document).ready(function () {
     paddingTop: "3em",
     paddingBottom: "10px",
     // fixedElements: '#header, #footer',
-    // fixedElements: '.header, #footer',
+    // fixedElements: '.section-heading',
     responsiveWidth: 0,
     // responsiveHeight: 0,
 
@@ -84,11 +84,25 @@ $(document).ready(function () {
     credits: { enabled: false },
 
     // Events
-    beforeLeave: function (origin, destination, direction, trigger) {},
+    beforeLeave: function (origin, destination, direction, trigger) {
+      $(".section-heading").css('opacity', 0);
+    },
     onLeave: function (origin, destination, direction, trigger) {
       if (trigger === "menu") closeNav();
+      // set section heading if not home
+      // const sectionHeading = document.querySelector(".section-heading");
+      // if (destination.index !== 0) {
+      //   sectionHeading.innerHTML = destination.anchor;
+      // } else {
+      //   sectionHeading.innerHTML = "";
+      // };
+      if (destination.index !== 0)
+        setTimeout(() => {
+          $(".section-heading").text(destination.anchor).css('opacity', 1);
+        }, 200);
     },
-    afterLoad: function (origin, destination, direction, trigger) {},
+    afterLoad: function (origin, destination, direction, trigger) {
+    },
     afterRender: function () {},
     afterResize: function (width, height) {},
     afterReBuild: function () {},
@@ -109,7 +123,6 @@ $(document).ready(function () {
     ) {},
     onScrollOverflow: function (section, slide, position, direction) {},
   });
-
 });
 
 
@@ -151,50 +164,6 @@ window.addEventListener("load", function () {
   //   const numLines = Math.round(totalLen / width) - 1;
   //   const height1 = numLines * lineHeight;
 
-  //   console.log(height1, 'l:', textLen, 'nl:', numLines, 'fs:', fontsize, 'w:', width, this.id);
-
-  //   const element = $(this).find(".card-text");
-  //   // const height = element.height();
-    
-  //   // console.log(element.height(), this.id);
-    
-  //   element.css("height", "auto");
-  //   const height = element.height();
-
-  //   element.css("height", height);
-
-  //   // set initial height to 0
-  //   // element.css("height", 0);
-    
-  //   // handle hover event
-  //   // $(this).hover(
-  //   //   function () {
-  //   //     element.css("height", height);
-  //   //   },
-  //   //   function () {
-  //   //     element.css("height", 0);
-  //   //   }
-  //   // );
-
-  // }, function () {
-  //   $(this).find(".card-text").css("height", 0);
-  // });
-
-
-  // setTimeout(() => {
-    
-  // }, 1000);
-  
-  // $(".card .card-img-overlay .card-text").slideUp(0, 'linear');
-
-  // $(".card").hover(
-  //   function () {
-  //     $(this).find(".card-text").slideDown(800, 'linear');
-  //   },
-  //   function () {
-  //     $(this).find(".card-text").slideUp(500, 'linear');
-  //   }
-  // );
 });
 
 

@@ -1,4 +1,8 @@
 @media screen and (max-width: 700px) {
+  :root {
+    --slide-height: 4em;
+  }
+
   .menu-item {
     text-align: center;
     margin-right: auto;
@@ -6,6 +10,14 @@
 
   .nav-links {
     width: 100%;
+  }
+
+  #fp-nav ul li:has(a.active) .fp-tooltip {
+    display: none;
+  }
+
+  .section-heading {
+    display: block;
   }
 
   .intro {
@@ -22,6 +34,7 @@
   /* cards */
   .card-deck {
     flex-wrap: wrap;
+    margin-top: 1em;
   }
 
   .card {
@@ -31,10 +44,12 @@
   .card .card-img-overlay {
     font-size: small;
     padding-top: 2em;
+    padding-bottom: 8px;
   
 
     .card-title {
       font-weight: bold;
+      margin-bottom: 4px;
     }
 
     .card-subtitle {
@@ -42,11 +57,19 @@
     }
 
     .card-text {
+      margin-top: 0.2em;
+      /* margin-bottom: 0; */
       font-weight: normal;
     }
   }
 
-  :root {
-    --slide-height: 4em;
+  /* .card-subtitle > span {
+    font-size: smaller;
+  } */
+
+  .card-links {
+    width: 100%;
+    justify-content: space-evenly;
   }
+
 }

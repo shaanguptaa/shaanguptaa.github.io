@@ -47,9 +47,15 @@ body {
 } */
 
 #fp-nav ul li .fp-tooltip {
-  padding-right: 5px;
+  padding: 5px 5px 5px 0px;
   margin-top: -2px;
   color: var(--color-yellow) !important;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(1, 2, 4, 0),
+    rgba(1, 2, 4, 0.4) 50%,
+    rgba(1, 2, 4, 0)
+  );
   transition: color 0.3s ease;
 }
 
@@ -60,6 +66,21 @@ body {
 
 .fp-overflow {
   overflow-x: hidden !important;
+}
+
+.section-heading {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  padding: 2em 2.5em;
+  font-size: 24px;
+  height: fit-content;
+  width: fit-content;
+  text-transform: uppercase;
+  color: var(--color-text);
+  display: none;
+  z-index: 100;
+  transition: opacity 0.2s ease;
 }
 
 header.nav > #menu-icon {
@@ -304,7 +325,7 @@ a {
   bottom: 10px;
 } */
 
-section[data-anchor=second] .fp-overflow {
+section[data-anchor=projects] .fp-overflow {
   margin-top: 2em;
   -webkit-mask: linear-gradient(
     to bottom,
@@ -386,7 +407,8 @@ section[data-anchor=second] .fp-overflow {
     rgba(1, 2, 4, 0.3) 80%,
     rgba(1, 2, 4, 0.0)
   );
-  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
   transition: all 0.5s ease;
 }
 
@@ -397,10 +419,12 @@ section[data-anchor=second] .fp-overflow {
 }
 
 .card > .card-img-overlay > .card-text {
+  /* margin-top: 0.5em; */
   width: 100%;
   /* height: 0; */
   transition: all 0.5s ease;
-  animation: slideDown 0.5s ease forwards;
+  -webkit-animation: slideDown 0.5s ease forwards;
+          animation: slideDown 0.5s ease forwards;
 }
 
 .card > .card-img-overlay > .card-subtitle::before {
@@ -414,9 +438,21 @@ section[data-anchor=second] .fp-overflow {
 
 .card > .card-img-overlay > .card-subtitle {
   color: lightgrey;
-  margin-bottom: 0.5em;
+  margin: 0.5em auto;
 }
 
+/* .card-subtitle.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+} 
+
+.card-subtitle.badges > span {
+  padding: 0.1em 1em;
+  border: var(--color-text) 1px solid;
+  border-radius: 1em;
+  background-color: rgba(1, 2, 4, 0.7);
+} */
 
 .card:hover {
   border: 1px solid var(--color-yellow);
@@ -434,8 +470,21 @@ section[data-anchor=second] .fp-overflow {
     /* max-height: 10em; */
     /* opacity: 1; */
     /* transition: all 0.5s ease; */
-    animation: slideUp 0.5s ease forwards;
+    -webkit-animation: slideUp 0.5s ease forwards;
+            animation: slideUp 0.5s ease forwards;
   }
+}
+
+
+@-webkit-keyframes slideUp {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: var(--slide-height);
+    opacity: 1;
+  }  
 }
 
 
@@ -448,6 +497,17 @@ section[data-anchor=second] .fp-overflow {
     max-height: var(--slide-height);
     opacity: 1;
   }  
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    max-height: var(--slide-height);
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes slideDown {
@@ -465,7 +525,11 @@ section[data-anchor=second] .fp-overflow {
   position: absolute;
   top: 0;
   right: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   margin: 0;
   padding: 1em;
@@ -481,7 +545,8 @@ section[data-anchor=second] .fp-overflow {
 
   .btn {
     background-color: rgba(1, 2, 4, 0.7);
-    backdrop-filter: blur(0.5px);
+    -webkit-backdrop-filter: blur(0.5px);
+            backdrop-filter: blur(0.5px);
     color: var(--color-text);
     font-size: smaller;
     font-weight: normal;
@@ -497,4 +562,11 @@ section[data-anchor=second] .fp-overflow {
     /* opacity: 1; */
     /* color: var(--color-yellow); */
   }
+
+  .btn[href=""] {
+    /* display: none; */
+    visibility: hidden;
+    z-index: -10;
+  }
+
 }

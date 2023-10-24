@@ -208,6 +208,52 @@ a {
   color: var(--color-yellow);
 }
 
+
+footer {
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  width: 100%;
+  height: fit-content;
+  padding: 1em 2em;
+  z-index: 1000;
+
+}
+footer > p {
+  font-size: 0.8em;
+  font-weight: 300;
+  color: lightgray;
+  height: fit-content;
+  width: 100%;
+  letter-spacing: 1px;
+  margin: 0;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: right;
+}
+
+footer > p > span > a  {
+  display: inline-block;
+  font-weight: 400;
+}
+
+footer > p > span > a::after {
+  background-color: var(--color-red);
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  margin: auto;
+  margin-top: 1px;
+  transition: all 0.2s ease-in-out;
+}
+
+footer > p > span > a:hover::after {
+  width: 100%;
+}
+
+
 #main {
   background-color: transparent !important;
 }

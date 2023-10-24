@@ -16,6 +16,18 @@
     display: none;
   }
 
+  footer > p {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* gap: 0.2em; */
+    letter-spacing: normal;
+
+    #design-and-develop {
+      display: none;
+    }
+  }
+
   .section-heading {
     display: block;
   }

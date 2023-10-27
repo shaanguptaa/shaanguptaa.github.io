@@ -90,8 +90,8 @@
           <a data-menuanchor="projects" class="menu-item" href="#projects"
             >Projects</a
           >
-          <a data-menuanchor="third" class="menu-item" href="#third"
-            >Third section</a
+          <a data-menuanchor="contact-me" class="menu-item" href="#contact-me"
+            >Contact Me</a
           >
           <a data-menuanchor="fourth" class="menu-item" href="#fourth"
             >Fourth section</a
@@ -102,7 +102,7 @@
 
     <div id="main">
       <!-- HOME SECTION -->
-      <section data-anchor="home" class="section section-1">
+      <section data-anchor="home" class="section">
         <div class="row">
           <div class="intro">
             <div class="text">
@@ -113,9 +113,9 @@
               <p class="lead designation">Full-Stack Software Developer</p>
             </div>
             <!-- <div class="btn-grp">
-            <a href="" class="btn">Contact Me</a>
-            <button class="btn btn-success btn-outline">Resume</button>
-          </div> -->
+              <a href="" class="btn">Contact Me</a>
+              <button class="btn btn-success btn-outline">Resume</button>
+            </div> -->
           </div>
           <!-- <img src="https://www.gravatar.com/avatar/5924fd783584f1d611203cf0ed307243?s=200&d=robohash" loading="lazy" alt="Profile Picture" class="profile-pic" /> -->
           <img
@@ -187,8 +187,66 @@
         </div>
       </section>
       
+      <!-- CONTACT SECTION -->
+      <section data-anchor="contact-me" class="section">
+        <div class="contact row">
+          <div class="contact-card col-md-6">
+            <h3 class="display-6">Get in <span style="color: var(--color-yellow);">Touch</span></h3>
+            <p class="lead">Have any queries or opportunities? Or just wanna say Hi?<br>Feel free to reach out!</p>
+            <p class="email"><a href="mailto:guptasahil670@gmail.com"><i class="fa-solid fa-envelope"></i> guptasahil670@gmail.com</a></p>
+            <p class="phone"><a href="tel:+919527420466"><i class="fa-solid fa-phone"></i>+91 95274 20466</a></p>
+            <div class="links">
+              <div class="resume" title="View My Resume">
+                <a href="https://drive.google.com/file/d/1bMjZaQTi8tS7BCYEoz7DBpoj2goNgL9Q/view?usp=drive_link" 
+                download="Sahil_Gupta_Resume.pdf" target="_blank" class="btn resume-btn"> 
+                  <i class="fa-solid fa-download"></i>&nbsp; My Resume
+                </a>
+              </div>
+              <div class="social-links">
+                <div class="social-link" title="LinkedIn - Sahil Gupta">
+                  <a href="https://www.linkedin.com/in/sahilguptaa/" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </div>
+                <div class="social-link" title="Github - shaanguptaa">
+                  <a href="https://www.github.com/shaanguptaa/" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+                <div class="social-link" title="Instagram - shaan_gupta_">
+                  <a href="https://www.instagram.com/shaan_gupta_/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form col">
+            <form id="form" class="form1">
+              <h3 class="lead">Write a <span style="color: var(--color-yellow);">Message</span></h3>
+              <div class="form-group">
+                <!-- <label class="user-label">Your Name:</label> -->
+                <input type="text" id="form-name" name="name" class="input" value="dsad" placeholder="Name" autocomplete="name" required title="Please Enter Your Name">
+              </div>
+              <div class="form-group">
+                <!-- <label class="user-label">Your Email:</label> -->
+                <input type="email" id="form-email" name="email" class="input" value="aa@aa.aa" placeholder="Email" autocomplete="email" required title="Please Enter Valid Email">
+              </div>
+              <div class="form-group">
+                <!-- <label class="user-label">Your Email:</label> -->
+                <textarea name="message" type="text" id="form-message" class="input fp-overflow" placeholder="Message" autocomplete="off" required title="Please Leave Your Message">efwef</textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="form-submit" name="submit" class="input"><i class="fa-solid fa-paper-plane"></i>&nbsp; Send</button>
+                <label for="form-submit" class="form-alert" aria-hidden="true">Email Sent</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      
       <!-- NEXT SECTION -->
-      <section data-anchor="third" class="section">Some section</section>
       <section data-anchor="fourth" class="section">Some section</section>
     </div>
 
@@ -249,5 +307,11 @@
 
     <!-- main.js -->
     <script src="js/main.js" defer></script>
+
+    <!-- smtp.js for contact form -->
+    <!-- <script src="https://smtpjs.com/v3/smtp.js" defer></script> -->
+    
+    <!-- email.js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
   </body>
 </html>

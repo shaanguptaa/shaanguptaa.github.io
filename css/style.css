@@ -371,6 +371,111 @@ footer > p > span > a:hover::after {
   bottom: 10px;
 } */
 
+section[data-anchor=about-me] > .fp-overflow {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2em;
+  padding: 1em;
+  margin: 0;
+  width: 100%;
+  /* height: 100%; */
+
+  .about-avatar {
+    width: 150px;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .about.lead {
+    width: 70%;
+    text-align: center;
+    backdrop-filter: blur(1px);
+  }
+
+  .about > img {
+    display: inline-block;
+    width: 1.5em;
+    margin-top: -5px;
+  }
+
+  .social-links {
+    
+    .social-link {
+      display: inline-block;
+      font-size: 24px;
+      margin: 0 1em;
+      backdrop-filter: blur(1px);
+    }
+
+    .social-link > a::after {
+      content: "";
+      height: 1px;
+      width: 0;
+      margin: auto;
+      background-color: var(--color-red);
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .social-link:hover > a::after {
+      width: 100%;
+    }
+  
+    .social-link > a {
+      color: var(--color-text);
+      transition: all 0.2s ease;
+    }
+  
+    .social-link:hover > a {
+      color: var(--color-yellow);
+    }
+  }
+
+  .contact-link {
+    font-size: large;
+    /* font-weight: bold; */
+    color: var(--color-text);
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .contact-link::after {
+    content: "";
+    height: 1px;
+    width: 0;
+    margin: auto;
+    background-color: var(--color-red);
+    display: block;
+    transition: all 0.2s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--color-yellow);
+  }
+
+  .contact-link:hover::after {
+    width: 100%;
+  }
+
+  .contact-link > i {
+    position: relative;
+    top: 0;
+    text-shadow: 0 -1.2em 0 var(--color-yellow);
+    transition: all 0.3s ease-out;
+  }
+
+  .contact-link:hover > i {
+    top: 1.3em;
+    color: var(--color-text);
+  }
+}
+
+
 section[data-anchor=projects] .fp-overflow {
   margin-top: 2em;
   -webkit-mask: linear-gradient(

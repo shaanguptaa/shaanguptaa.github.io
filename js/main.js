@@ -22,7 +22,7 @@ $(document).ready(function () {
     lockAnchors: false,
     navigation: true,
     navigationPosition: "right",
-    navigationTooltips: ["Home", "Projects", "Contact Me", "fourthSlide"],
+    navigationTooltips: ["Home", "About Me", "Projects", "Contact Me", "fourthSlide"],
     showActiveTooltip: true,
     // slidesNavigation: false,
     // slidesNavPosition: 'bottom',
@@ -196,7 +196,7 @@ $("#form").submit(function (e) {
     email: $(form).find("#form-email").val(),
     message: $(form).find("#form-message").val(),
   };
-
+  
   emailjs.init("_L5ZJ-c5fB4pGBdkF");
   emailjs.send("default_service", "template_8qeq9g3", templateParams).then(
     function (response) {

@@ -43,6 +43,11 @@
     text-align: center;
   }
 
+  /* about me */
+  .about.lead {
+    width: 100% !important;
+  }
+
   /* cards */
   .card-deck {
     flex-wrap: wrap;

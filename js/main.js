@@ -22,7 +22,7 @@ $(document).ready(function () {
     lockAnchors: false,
     navigation: true,
     navigationPosition: "right",
-    navigationTooltips: ["Home", "About Me", "Projects", "Contact Me", "fourthSlide"],
+    navigationTooltips: ["Home", "About Me", "Projects", "Contact Me"],
     showActiveTooltip: true,
     // slidesNavigation: false,
     // slidesNavPosition: 'bottom',

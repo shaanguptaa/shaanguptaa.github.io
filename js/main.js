@@ -139,7 +139,10 @@ window.addEventListener("load", function () {
   // show card images when loaded and also load gifs
   $(".card img.card-img:not(.card-img-hover)").each(function () {
     $(this).on("load", function () {
+      $(this).parent().css("opacity", "1");
       $(this).css("opacity", "1");
+      // var h = $(this).css("height");
+      // $(this).parent().css("height", h);
       // const imgHover = document.createElement("img");
       // imgHover.setAttribute("class", "card-img-hover");
       // imgHover.setAttribute("src", $(this).attr("src").replace(".png", ".gif"));

@@ -14,6 +14,8 @@ $(document).ready(function () {
 
   // fullpage.js initialize
 
+
+
   let myFullpage = new fullpage("#main", {
     licenseKey: "gplv3-license",
 

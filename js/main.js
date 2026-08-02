@@ -54,7 +54,7 @@ $(document).ready(function () {
     // scrollOverflowMacStyle: false,
     // scrollOverflowReset: false,
     touchSensitivity: 15,
-    bigSectionsDestination: top,
+    bigSectionsDestination: "top",
 
     // Accessibility
     keyboardScrolling: true,
@@ -139,18 +139,18 @@ window.addEventListener("load", function () {
   $(".avatar").attr("src", $(".avatar").attr("src").replace(".png", ".gif"));
 
   // show card images when loaded and also load gifs
-  $(".card img.card-img:not(.card-img-hover)").each(function () {
-    $(this).on("load", function () {
-      $(this).parent().css("opacity", "1");
-      $(this).css("opacity", "1");
-      // var h = $(this).css("height");
-      // $(this).parent().css("height", h);
-      // const imgHover = document.createElement("img");
-      // imgHover.setAttribute("class", "card-img-hover");
-      // imgHover.setAttribute("src", $(this).attr("src").replace(".png", ".gif"));
-      // $(this).after(imgHover);
-    });
-  });
+  // $(".card img.card-img:not(.card-img-hover)").each(function () {
+  //   $(this).on("load", function () {
+  //     $(this).parent().css("opacity", "1");
+  //     $(this).css("opacity", "1");
+  //     // var h = $(this).css("height");
+  //     // $(this).parent().css("height", h);
+  //     // const imgHover = document.createElement("img");
+  //     // imgHover.setAttribute("class", "card-img-hover");
+  //     // imgHover.setAttribute("src", $(this).attr("src").replace(".png", ".gif"));
+  //     // $(this).after(imgHover);
+  //   });
+  // });
 
   //  set initial height of card-text to 0
   // $(".card .card-img-overlay .card-text").css("height", 0);

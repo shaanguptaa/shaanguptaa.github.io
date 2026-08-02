@@ -513,7 +513,7 @@ section[data-anchor=projects] .fp-overflow {
   overflow: hidden;
   border-radius: 1em;
   transition: all 0.5s ease;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .card > .card-img {
@@ -527,7 +527,7 @@ section[data-anchor=projects] .fp-overflow {
   /* object-fit: clip; */
   border-radius: inherit;
   transition: opacity 0.5s ease;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 /* .card > .card-img-hover {
@@ -579,32 +579,32 @@ section[data-anchor=projects] .fp-overflow {
           animation: slideDown 0.5s ease forwards;
 }
 
-.card > .card-img-overlay > .card-subtitle::before {
+/* .card > .card-img-overlay > .card-subtitle::before {
   content: "- \a0";
   transform: scaleX(2);
   transform-origin: left;
   padding-right: 0.5em;
   font-weight: bold;
   display: inline-block;
-}
+} */
 
 .card > .card-img-overlay > .card-subtitle {
   color: lightgrey;
   margin: 0.5em auto;
 }
 
-/* .card-subtitle.badges {
+.card-subtitle.badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
 } 
 
 .card-subtitle.badges > span {
-  padding: 0.1em 1em;
+  padding: 0.3em 1em;
   border: var(--color-text) 1px solid;
   border-radius: 1em;
   background-color: rgba(1, 2, 4, 0.7);
-} */
+}
 
 .card:hover {
   border: 1px solid var(--color-yellow);

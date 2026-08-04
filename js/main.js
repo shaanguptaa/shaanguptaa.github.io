@@ -217,3 +217,47 @@ $("#form").submit(function (e) {
     }
   );
 });
+
+
+// Resume Dropdown
+// Resume Popover
+$(function () {
+
+    const $resumeMenu = $(".resume-menu");
+    const $resumePopover = $("#resume-popover");
+    const $resumeToggle = $("#resume-toggle");
+
+    // Toggle popover
+    $resumeToggle.on("click", function (e) {
+
+        e.stopPropagation();
+
+        $resumeMenu.toggleClass("open");
+        $resumePopover.toggleClass("show");
+
+    });
+
+    // Close when clicking outside
+    $(document).on("click", function () {
+
+        $resumeMenu.removeClass("open");
+        $resumePopover.removeClass("show");
+
+    });
+
+    // Prevent closing when clicking inside popover
+    $resumePopover.on("click", function (e) {
+
+        e.stopPropagation();
+
+    });
+
+    // Close after selecting an option
+    $resumePopover.find("a").on("click", function () {
+
+        $resumeMenu.removeClass("open");
+        $resumePopover.removeClass("show");
+
+    });
+
+});

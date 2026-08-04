@@ -783,29 +783,118 @@ section[data-anchor=contact-me] > .contact {
     }
   }
 
-  .resume {
-    
-    .resume-btn {
+    .resume {
+      position: relative;
+      display: inline-block;
       width: max-content;
       color: var(--color-text);
       border: var(--color-text) 1px solid;
       border-radius: 0.5em;
-    }
-  
-    .resume-btn:hover {
-      /* border: var(--color-red) 1px solid;
-      color: var(--color-red); */
-      background-color: var(--color-green);
-    }
-  
-    .resume-btn:active {
-      border: var(--color-green) 1px solid;
-      /* color: var(--color-green); */
-    }
+      transition: all .2s ease;
     
-  }
+      .resume-btn-group {
+        display: flex;
+        transition: inherit;
+    
+        .resume-btn {
+          color: inherit;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          transition: inherit;
+        }
+    
+        .resume-btn:hover, .more-options > .resume-arrow-btn:hover {
+          /* border: var(--color-red) 1px solid;
+              color: var(--color-red); */
+          background-color: var(--color-green);
+        }
+    
+        .resume-btn:active, .more-options > .resume-arrow-btn:active {
+          border: var(--color-green) 1px solid;
+          /* color: var(--color-green); */
+        }
+    
+        .more-options {
+          transition: inherit;
+
+          .resume-arrow-btn {
+            color: inherit;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            width: fit-content;
+            transition: inherit;
+    
+            i {
+              transition: inherit;
+            }
+          }
+    
+          .resume-popover {
+            position: absolute;
+            width: max-content;
+            background: #181818;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 0.5em;
+            overflow: hidden;
+            box-shadow: 0 0.5em 40px rgba(0, 0, 0, .35);
+            opacity: 0;
+            visibility: hidden;
+            /* transform: translateY(10px); */
+            transition: inherit;
+            z-index: 999;
+    
+            a {
+              display: flex;
+              align-items: center;
+              gap: 0.7em;
+              padding: 14px 10px;
+              color: var(--color-text);
+              text-decoration: none;
+              transition: .2s;
+    
+              i {
+                width: fit-content;
+              }
+            }
+    
+            a:hover {
+              background: rgba(255, 255, 255, .08);
+              color: var(--color-yellow);
+            }
+          }
+    
+          .resume-popover.show {
+            opacity: 1;
+            visibility: visible;
+            animation: fade 0.5s  delay iteration-count direction fill-mode;
+            /* transform: translateY(0); */
+          }
+    
+          /* Small arrow */
+          /* .resume-popover::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            right: 18px;
+            width: 14px;
+            height: 14px;
+            background: #181818;
+            border-left: 1px solid rgba(255, 255, 255, .08);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+            transform: rotate(45deg);
+          } */
+        }
+      }
+    
+    }
+
+    .resume.open > .resume-btn-group > .more-options > .resume-arrow-btn > i {
+      transform: rotate(180deg);
+      transition: inherit;
+    }
   
 }
+
 
 
 .contact > .contact-form {

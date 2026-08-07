@@ -9,13 +9,14 @@ on:
   push:
     paths:
       - "config/featured-repos.json"
+      - "scripts/generate-projects.js"
+
+permissions:
+  contents: write
 
 jobs:
   update-projects:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout Repository
@@ -35,7 +36,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add data/projects.json
+          git add images/projects
 
-          git diff --cached --quiet || git commit -m "Auto update projects.json"
+          git diff --cached --quiet || git commit -m "chore: update portfolio projects"
 
           git push

@@ -752,7 +752,7 @@ section[data-anchor=contact-me] > .contact {
   transition: all 0.2s ease;
 }
 .contact > .contact-card > p > a:hover {
-  color: var(--color-green);
+  color: var(--color-yellow);
 }
 
 .contact > .contact-card > .links {
@@ -779,7 +779,7 @@ section[data-anchor=contact-me] > .contact {
     }
     
     .social-link:hover > a {
-      color: var(--color-green);
+      color: var(--color-yellow);
     }
   }
 

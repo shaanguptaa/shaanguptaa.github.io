@@ -7,16 +7,16 @@
         "homepage": "https://iceandspice.onrender.com",
         "stars": 1,
         "forks": 0,
-        "updated": "2026-08-02T16:02:52Z",
-        "created": "2022-02-28T08:06:31Z",
+        "updated": "2026-08-03T17:35:07Z",
         "topics": [
             "css",
             "django",
             "html",
             "javascript",
+            "mysql",
             "python"
         ],
-        "image": "https://raw.githubusercontent.com/shaanguptaa/IceAndSpice/master/preview.png"
+        "image": "images/projects/IceAndSpice.png"
     },
     {
         "id": "MazeGenerator",
@@ -26,8 +26,7 @@
         "homepage": "",
         "stars": 0,
         "forks": 0,
-        "updated": "2023-09-30T23:10:00Z",
-        "created": "2023-09-30T22:56:38Z",
+        "updated": "2026-08-02T20:51:36Z",
         "topics": [
             "backtracking",
             "dfs",
@@ -36,7 +35,7 @@
             "pygame",
             "python"
         ],
-        "image": "https://raw.githubusercontent.com/shaanguptaa/MazeGenerator/master/preview.png"
+        "image": "images/projects/MazeGenerator.png"
     },
     {
         "id": "MazeSolver",
@@ -46,10 +45,9 @@
         "homepage": null,
         "stars": 0,
         "forks": 0,
-        "updated": "2023-10-04T09:32:44Z",
-        "created": "2023-10-04T09:31:21Z",
+        "updated": "2026-08-02T20:52:42Z",
         "topics": [],
-        "image": "https://raw.githubusercontent.com/shaanguptaa/MazeSolver/master/preview.png"
+        "image": "images/projects/MazeSolver.png"
     },
     {
         "id": "contentAggregator",
@@ -59,15 +57,14 @@
         "homepage": "https://contentaggregator.onrender.com",
         "stars": 1,
         "forks": 0,
-        "updated": "2026-08-02T15:47:54Z",
-        "created": "2021-05-26T16:15:10Z",
+        "updated": "2026-08-02T20:48:08Z",
         "topics": [
             "content-aggregator",
             "django",
             "python",
             "rss"
         ],
-        "image": "https://raw.githubusercontent.com/shaanguptaa/contentAggregator/main/preview.png"
+        "image": "images/projects/contentAggregator.png"
     },
     {
         "id": "Named-Entity-Recognition",
@@ -77,8 +74,7 @@
         "homepage": "https://shaanguptaa-ner.streamlit.app/",
         "stars": 1,
         "forks": 0,
-        "updated": "2025-09-14T09:28:48Z",
-        "created": "2023-11-08T09:24:22Z",
+        "updated": "2026-08-02T20:53:27Z",
         "topics": [
             "bi-lstm",
             "machine-learning",
@@ -88,6 +84,6 @@
             "python",
             "streamlit"
         ],
-        "image": "https://raw.githubusercontent.com/shaanguptaa/Named-Entity-Recognition/master/preview.png"
+        "image": "images/projects/Named-Entity-Recognition.png"
     }
 ]

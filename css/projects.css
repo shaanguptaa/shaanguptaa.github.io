@@ -22,12 +22,19 @@
 }
 
 .project-showcase {
-    min-height: 100%;
+    max-width: 100%;
+    height: max-content;
+    /* min-height: 100%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 80px;
     padding: 1em 8%;
+    margin-bottom: 2em;
+    background: rgba(255,255,255,0.025);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
 }
 
 .project-showcase:last-child {

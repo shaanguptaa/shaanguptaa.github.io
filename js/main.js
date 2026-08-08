@@ -14,9 +14,7 @@ $(document).ready(function () {
 
   // fullpage.js initialize
 
-
-
-  let myFullpage = new fullpage("#main", {
+  letmyFullpage = new fullpage("#main", {
     licenseKey: "gplv3-license",
 
     // Navigation
@@ -49,10 +47,10 @@ $(document).ready(function () {
     // offsetSections: false,
     // resetSliders: false,
     // fadingEffect: false,
-    // normalScrollElements: '#element1, .element2',
+    // normalScrollElements: "#projects-container",
     scrollOverflow: true,
     // scrollOverflowMacStyle: false,
-    // scrollOverflowReset: false,
+    scrollOverflowReset: false,
     touchSensitivity: 15,
     bigSectionsDestination: "top",
 
@@ -75,7 +73,7 @@ $(document).ready(function () {
     // fixedElements: '#header, #footer',
     // fixedElements: '.section-heading',
     responsiveWidth: 0,
-    // responsiveHeight: 0,
+    responsiveHeight: 0,
 
     // Custom selectors
     sectionSelector: ".section",

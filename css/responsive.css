@@ -29,7 +29,25 @@
   }
 
   .section-heading {
-    display: block;
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    margin: 0;
+    width: max-content;
+  }
+
+  header.nav {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  header.nav .nav-elements {
+    gap: 1em;
+    padding-left: 4em;
+  }
+
+  header.nav #menu-icon {
+    padding: 3em 4em 3em 1em;
   }
 
   .intro {
@@ -41,6 +59,10 @@
 
   .designation {
     text-align: center;
+  }
+
+  .home-btn-container {
+    gap: 1em;
   }
 
   /* about me */
@@ -94,12 +116,13 @@
     margin: 2em auto !important;
     /* display: block !important; */
     flex-wrap: wrap !important;
-    gap: 1em !important;
+    align-content: start;
+    gap: 3.5em !important;
     overflow-y: scroll;
 
     .contact-card {
-      margin-top: -1em !important;
-      padding: 0 12px !important;
+      /* margin-top: -1em !important; */
+      padding: 2em 16px 0 !important;
       
 
       .display-6 {
@@ -124,7 +147,7 @@
     }
 
     .contact-form {
-      margin-top: -3em !important;
+      /* margin-top: -3em !important; */
       height: fit-content;
       /* width: 100%; */
       padding: 0;
@@ -142,6 +165,17 @@
 
     }
 
+  }
+
+  #resume-nav-placeholder {
+    display: none;
+    visibility: hidden;
+  }
+
+  #resume-mobile-placeholder {
+    display: block;
+    visibility: visible;
+    z-index: 9999;
   }
 
 }

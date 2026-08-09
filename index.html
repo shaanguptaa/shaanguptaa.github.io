@@ -65,6 +65,9 @@
     <!-- Projects.css -->
     <link rel="stylesheet" href="css/projects.css" />
 
+    <!-- Projects.css -->
+    <link rel="stylesheet" href="css/resume.css" />
+
   </head>
 
   <body>
@@ -89,11 +92,13 @@
 
     <!-- Header Navigation -->
     <header class="nav">
-      <div class="container">
+      <div class="nav-elements">
         <h1 class="section-heading"></h1>
+        <!-- Resume -->
+        <div id="resume-nav-placeholder" class="resume-placeholder show"></div>
       </div>
-      
-      <div class="container" id="menu-icon">
+
+      <div class="menu-icon" id="menu-icon">
         <div class="bars">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -129,11 +134,20 @@
                 <h1 class="display-1 title">Sahil Gupta</h1>
               </div>
               <p class="lead designation">Full-Stack Software Developer</p>
+              <div class="home-btn-container">
+                <!-- Resume -->
+                <div id="resume-home-placeholder" class="resume-placeholder"></div>
+                <div class="outline-btn-effect">
+                  <a href="#contact-me" class="contact-btn btn">Contact Me &nbsp;
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              <!-- <div class="btn-grp">
+                <a href="" class="btn">Contact Me</a>
+                <button class="btn btn-success btn-outline">Resume</button>
+              </div> -->
             </div>
-            <!-- <div class="btn-grp">
-              <a href="" class="btn">Contact Me</a>
-              <button class="btn btn-success btn-outline">Resume</button>
-            </div> -->
           </div>
           <!-- <img src="https://www.gravatar.com/avatar/5924fd783584f1d611203cf0ed307243?s=200&d=robohash" loading="lazy" alt="Profile Picture" class="profile-pic" /> -->
           <img
@@ -190,37 +204,7 @@
             <div class="links">
 
               <!-- Resume -->
-              <div class="resume resume-menu" title="View My Resume">
-                <div class="resume-btn-group">
-          
-                  <!-- Primary Action (Preview) -->
-                  <a href="resume/Sahil_Gupta_Resume.pdf" target="_blank" class="btn resume-btn" title="Preview Resume">
-                    <i class="fa-solid fa-file-lines"></i>
-                    &nbsp; My Resume
-                  </a>
-          
-                  <!-- More Options -->
-                  <div class="more-options">
-                    <button type="button" class="btn resume-arrow-btn" id="resume-toggle" title="More Options">
-                      <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-
-                    <!-- Popover Dropdown -->
-                    <div class="resume-popover" id="resume-popover">
-                      <a href="resume/Sahil_Gupta_Resume.pdf" class="btn" target="_blank">
-                        <i class="fa-solid fa-eye"></i>
-                        Preview Resume
-                      </a>
-                      <a href="resume/Sahil_Gupta_Resume.pdf" class="btn" download="Sahil_Gupta_Resume.pdf">
-                        <i class="fa-solid fa-download"></i>
-                        Download Resume
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
+              <div id="resume-contact-placeholder" class="resume-placeholder"></div>
 
               <!-- Social Links -->
               <div class="social-links">
@@ -271,6 +255,9 @@
       <!-- <section data-anchor="fourth" class="section">Some section</section> -->
     </div>
 
+
+    <div id="resume-mobile-placeholder" class="resume-mobile-placeholder">
+    </div>
 
     <footer class="footer">
       <p>
@@ -328,6 +315,9 @@
 
     <!-- Project loader -->
     <script src="js/projects.js"></script>
+
+    <!-- Resume Loader -->
+    <script src="js/resume.js"></script>
 
     <!-- main.js -->
     <script src="js/main.js" defer></script>

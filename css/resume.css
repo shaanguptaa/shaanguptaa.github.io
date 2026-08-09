@@ -1,0 +1,192 @@
+.outline-btn-effect {
+    transition: all 0.2s ease;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    color: var(--color-text);
+    border: var(--color-text) 1px solid;
+    border-radius: 0.5em;
+    /* display: flex; */
+}
+
+.resume {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+
+  .resume-btn-group {
+    display: flex;
+    transition: inherit;
+
+    .resume-btn {
+      border: 0;
+      color: inherit;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      transition: inherit;
+    }
+
+    .resume-download {
+        border-left: 1px solid var(--color-text);
+        color: inherit;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        width: fit-content;
+        transition: inherit;
+
+        i {
+            transition: inherit;
+        }
+    }
+  }
+}
+
+.outline-btn-effect:hover {
+    border: var(--color-yellow) 1px solid;
+    /* color: var(--color-yellow); */
+    box-shadow:
+        0 0 12px rgba(253, 177, 0, 0.35),
+        0 0 28px rgba(253, 177, 0, 0.18);
+    background-color: #ffb10025;
+}
+
+.resume-btn-group:hover .resume-download {
+    border-left: 1px solid var(--color-yellow);
+}
+
+.resume-btn:hover, .resume-download:hover {
+    background-color: #ffb10025;
+}
+
+/* Mobile Resume FLoating Button */
+
+.resume-mobile-placeholder {
+    position: absolute;
+    right: 2em;
+    bottom: max(3em, env(safe-area-inset-bottom));
+    z-index: -10;
+    border-radius: 50%;
+    display: none;
+    visibility: hidden;
+}
+
+.mobile-resume {
+    z-index: inherit;
+}
+
+.mobile-resume .resume-actions {
+    visibility: hidden;
+    display: none;
+    z-index: inherit;
+}
+
+.mobile-resume {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Main floating button */
+.mobile-resume-btn {
+    width: 115px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: none;
+    border-radius: 24px;
+
+    color: #010204;
+    background-color: var(--color-yellow);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.4),
+        0 0 12px rgba(253, 177, 0, 0.12);
+
+    transition: all 0.25s ease;
+}
+
+.mobile-resume-btn:active {
+    transform: scale(0.95);
+}
+
+/* Action menu */
+.resume-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 10px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.95);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
+
+/* Open state */
+.mobile-resume.open .resume-actions {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    transform: translateY(0) scale(1);
+}
+
+/* Individual actions */
+.resume-action {
+    min-width: 125px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 0 14px;
+
+    color: var(--color-text);
+    background: #11100c;
+
+    border: 1px solid rgba(253, 177, 0, 0.25);
+    border-radius: 20px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.resume-action i {
+    color: var(--color-yellow);
+}
+
+.resume-action:active {
+    background: #1a1609;
+    border-color: var(--color-yellow);
+}
+
+/* Change icon when menu is open */
+.mobile-resume.open .mobile-resume-btn i {
+    transform: rotate(45deg);
+}
+
+.mobile-resume-btn i {
+    transition: transform 0.25s ease;
+}

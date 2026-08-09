@@ -70,35 +70,64 @@ body {
 }
 
 .section-heading {
-  position: fixed;
-  top: 0%;
   left: 0%;
-  padding: 2em 2.5em;
+  /* padding: 2em 2.5em; */
   font-size: 24px;
   height: fit-content;
   width: fit-content;
   text-transform: uppercase;
   color: var(--color-text);
-  display: none;
-  z-index: 100;
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  z-index: inherit;
   transition: opacity 0.2s ease;
 }
 
-header.nav > #menu-icon {
-  padding: 3em 5em;
+header.nav {
+  z-index: 900;
   position: fixed;
   top: 0%;
   right: 0%;
+  width: 100%;
+  height: fit-content;
+  padding-top: 1em;
+  display: inline-flex;
+  justify-content: right;
+  align-items: center;
+  gap: 4em;
+
+  .nav-elements {
+    display: inline-flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2em;
+  }
+}
+
+
+#resume-nav-placeholder {
+  z-index: inherit;
+  /* transform: translateY(25%); */
+}
+
+header.nav > #menu-icon {
+  padding: 3em 5em 3em 0em;
+  /* right: 0%; */
   z-index: 1000;
   cursor: pointer;
   width: 40px;
   height: 40px;
+  /* display: inline-flex;
+  align-items: center;
+  justify-content: center; */
 }
 
 .bars {
   width: 24px;
   height: 24px;
   display: inline-block;
+  transform: translateY(-50%);
 }
 
 .bar1,
@@ -129,6 +158,7 @@ header.nav > #menu-icon {
   align-items: center;
   justify-content: right;
   opacity: 0;
+  visibility: hidden;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -146,6 +176,7 @@ header.nav > #menu-icon {
 #menu.active {
   opacity: 1;
   z-index: 990;
+  visibility: visible;
 }
 
 .nav-links {
@@ -261,6 +292,11 @@ footer > p > span > a:hover::after {
 
 #main > section {
   padding: 50px !important;
+}
+
+section[data-anchor=home] > .fp-overflow {
+  height: 100%;
+  align-content: center;
 }
 
 .intro {
@@ -782,118 +818,7 @@ section[data-anchor=contact-me] > .contact {
     .social-link:hover > a {
       color: var(--color-yellow);
     }
-  }
-
-    .resume {
-      position: relative;
-      display: inline-block;
-      width: max-content;
-      color: var(--color-text);
-      border: var(--color-text) 1px solid;
-      border-radius: 0.5em;
-      transition: all .2s ease;
-    
-      .resume-btn-group {
-        display: flex;
-        transition: inherit;
-    
-        .resume-btn {
-          color: inherit;
-          border-top-right-radius: 0;
-          border-bottom-right-radius: 0;
-          transition: inherit;
-        }
-    
-        .resume-btn:hover, .more-options > .resume-arrow-btn:hover {
-          /* border: var(--color-red) 1px solid;
-              color: var(--color-red); */
-          background-color: var(--color-green);
-        }
-    
-        .resume-btn:active, .more-options > .resume-arrow-btn:active {
-          border: var(--color-green) 1px solid;
-          /* color: var(--color-green); */
-        }
-    
-        .more-options {
-          transition: inherit;
-
-          .resume-arrow-btn {
-            color: inherit;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            width: fit-content;
-            transition: inherit;
-    
-            i {
-              transition: inherit;
-            }
-          }
-    
-          .resume-popover {
-            position: absolute;
-            width: max-content;
-            background: #181818;
-            border: 1px solid rgba(255, 255, 255, .08);
-            border-radius: 0.5em;
-            overflow: hidden;
-            box-shadow: 0 0.5em 40px rgba(0, 0, 0, .35);
-            opacity: 0;
-            visibility: hidden;
-            /* transform: translateY(10px); */
-            transition: inherit;
-            z-index: 999;
-    
-            a {
-              display: flex;
-              align-items: center;
-              gap: 0.7em;
-              padding: 14px 10px;
-              color: var(--color-text);
-              text-decoration: none;
-              transition: .2s;
-    
-              i {
-                width: fit-content;
-              }
-            }
-    
-            a:hover {
-              background: rgba(255, 255, 255, .08);
-              color: var(--color-yellow);
-            }
-          }
-    
-          .resume-popover.show {
-            opacity: 1;
-            visibility: visible;
-            animation: fade 0.5s  delay iteration-count direction fill-mode;
-            /* transform: translateY(0); */
-          }
-    
-          /* Small arrow */
-          /* .resume-popover::before {
-            content: "";
-            position: absolute;
-            top: -8px;
-            right: 18px;
-            width: 14px;
-            height: 14px;
-            background: #181818;
-            border-left: 1px solid rgba(255, 255, 255, .08);
-            border-top: 1px solid rgba(255, 255, 255, .08);
-            transform: rotate(45deg);
-          } */
-        }
-      }
-    
-    }
-
-    .resume.open > .resume-btn-group > .more-options > .resume-arrow-btn > i {
-      transform: rotate(180deg);
-      transition: inherit;
-    }
-  
+  }  
 }
 
 
@@ -1006,4 +931,21 @@ section[data-anchor=contact-me] > .contact {
 
   }
 
+}
+
+.home-btn-container {
+  margin-top: 1em;
+  width: 100%;
+  display: inline-flex;
+  position: relative;
+  gap: 2em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact-card .outline-btn-effect {
+  width: fit-content;
+}
+.contact-btn {
+  color: var(--color-text);
 }
